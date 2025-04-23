@@ -21,6 +21,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'Last_name1', // Primer apellido
+        'Last_name2', // Segundo apellido
+        'phone',      // Teléfono
+        'address',    // Dirección
+        'role',       // Rol del usuario
+        
     ];
 
     /**
@@ -43,6 +49,7 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'registration_date' => 'datetime', // Asegúrate de que este campo sea tratado como fecha
         ];
     }
     public function comment()
