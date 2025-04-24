@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Iniciar sesion y Registrarte</title>
     
-    <link rel="stylesheet" href="{{ asset('Login.css') }}">
-    <script src="{{ asset('Login.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ asset('Login/Login.css') }}">
+    <script src="{{ asset('Login/Login.js') }}" defer></script>
 </head>
 <body>
+<!-- para que apararezca el registro exitoso -->
+@if(session('success'))
+    <script>
+        alert("{{ session('success') }}");
+    </script>
+@endif
+
     <div class="box">
     <style>
     body {
@@ -38,7 +45,7 @@
                     <a href="#">Olvidaste tu contraseña?</a>
                 </form>
 
-                    {{-- <form class="signup" name="signupForm" onsubmit="return validateSignupForm()" action="{{ route('register.store') }}" method="POST"> --}}
+                 <!-- <form class="signup" name="signupForm" onsubmit="return validateSignupForm()" action="{{ route('register.store') }}" method="POST">  -->
                         <form action="{{ route('register.store') }}" method="POST">
                             @csrf
                         <input type="text" name="name" id="signName" placeholder="Usuario" required>
