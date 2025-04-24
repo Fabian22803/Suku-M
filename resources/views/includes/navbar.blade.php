@@ -16,8 +16,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link text-white" href="#">Iniciar sesion</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#">Registrarte</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#">Plantas</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{route('register.create')}}">Registrarte</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="">Plantas</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#">Recetas</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#"></a></li>
         </ul>
