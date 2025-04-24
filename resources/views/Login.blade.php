@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Iniciar sesion y Registrarte</title>
-     <!-- Importar CSS y JS con Vite -->
-     @vite(['resources/css/Login.css', 'resources/js/Login.js'])
+    
+    <link rel="stylesheet" href="{{ asset('Login.css') }}">
+    <script src="{{ asset('Login.js') }}" defer></script>
 </head>
 <body>
     <div class="box">
-        <style>
-            body {
-                background-image: url('{{ asset('images/portada.jpg') }}');
-            }
+    <style>
+    body {
+        background-image: url("{{ asset('images/portada.jpg') }}");
+    }
+</style>
         </style>
 
         <img src="{{ asset('images/icono.jpg') }}" class="rounded">
