@@ -155,3 +155,11 @@ body{
     color: #ffffff;
     font-size: 15px;
   }
+  #signRole {
+    margin-bottom: 20px; /* Agrega espacio debajo del select */
+    padding: 10px;       /* Aumenta el espacio interno del select */
+    font-size: 16px;     /* Aumenta el tamaño de la fuente */
+    width: 100%;         /* Asegura que ocupe todo el ancho disponible */
+    border-radius: 5px;  /* Opcional: redondea las esquinas */
+    border: 1px solid #ccc; /* Opcional: agrega un borde */
+}

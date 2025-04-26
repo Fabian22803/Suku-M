@@ -32,7 +32,7 @@ class RegistreController extends Controller
         // return redirect()->route('login.create')->with('success', 'Usuario registro exitosamente');
         // return view('Login');
         
-return redirect()->route('login.create')->with('success', '¡Registro exitoso!');
+return redirect()->route('register.create')->with('success', '¡Registro exitoso! Por favor, inicia sesión.');
         // return view('Login');
     }
     

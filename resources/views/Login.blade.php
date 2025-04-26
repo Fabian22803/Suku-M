@@ -34,6 +34,12 @@
             <div id="errorMsg"></div>
             <div class="content">
                 <form class="login" name="loginForm" onsubmit="return validateLoginForm()" method="POST">
+                <select name="role" id="signRole" required>
+                            <option value="" disabled selected>Selecciona un rol</option>
+                            <option value="superadmin">SuperAdministrador</option>
+                            <option value="admin">Administrador</option>
+                            <option value="user">Usuario</option>
+                        </select>
                     <input type="text" name="name" id="logName" placeholder="Usuario">
                     <input type="password" name="password" id="logPassword" placeholder="Contraseña">
                     <div id="check">
@@ -57,11 +63,9 @@
                         <input type="text" name="address" id="signAddress" placeholder="Dirección">
                         <select name="role" id="signRole" required>
                             <option value="" disabled selected>Selecciona un rol</option>
-                            <option value="admin">Administrador</option>
                             <option value="superadmin">SuperAdministrador</option>
-                            <option value="student">Estudiante</option>
-                            <option value="teacher">Docente</option>
-                            <option value="registerOnly">Solo registrarte</option>
+                            <option value="admin">Administrador</option>
+                            <option value="user">Usuario</option>
                         </select>
                     <br><br>
                     <input type="submit" value="Registrarte">
