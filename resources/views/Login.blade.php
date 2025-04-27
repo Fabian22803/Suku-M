@@ -48,7 +48,7 @@
                     </div>
                     <br><br>
                     <input type="submit" value="Iniciar sesion">
-                    <a href="#">Olvidaste tu contraseña?</a>
+                    <a href="{{ route('password.request') }}">Olvidaste tu contraseña?</a>
                 </form>
 
                  <!-- <form class="signup" name="signupForm" onsubmit="return validateSignupForm()" action="{{ route('register.store') }}" method="POST">  -->

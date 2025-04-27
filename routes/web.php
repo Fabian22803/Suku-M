@@ -10,16 +10,19 @@ Route::get('/', function () {
 
 Route::get('/home', [InicioController::class, 'create'])->name('home');
 
- 
-
-
-
-
+//para el registro del usuario
 Route::get('/register', [RegistreController::class, 'create'])->name('register.create');
 Route::post('/register',[RegistreController::class,'store'])->name('register.store');
 
+//para el inicio de sesion
 
-// Route::get('/register', [RegistreController::class, 'create'])->name('Login.create');
-Route::get('/login', function () {
-    return view('Login'); // Asegúrate de que 'Login.blade.php' exista en resources/views
-})->name('login.create');
+//para la recuperacion de contraseña
+//muestra el formulario de recuperacion de contraseña
+Route::get('/Recuperar_Contraseña', [PasswordRestController::class, 'showForgotPasswordForm'])->name('password.request');
+//envia el enlace de restablecimiento de contraseña
+Route::post('/password/email', [PasswordRestController::class, 'sendResetLink'])->name('password.email');
+
+// Ruta para mostrar el formulario de restablecimiento de contraseña
+Route::get('/reset-password/{token}', function ($token) {
+    return view('auth.reset-password', ['token' => $token]);
+})->name('password.reset');
