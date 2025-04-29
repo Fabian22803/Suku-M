@@ -1,0 +1,1132 @@
+/* styles.css */
+/* HomeS.css - versión Sukü colores naturales */
+
+/* Reset básico y transiciones suaves */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f1de; /* Fondo suave tipo beige */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background-color: #27ae60; /* Verde oscuro */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    font-size: 32px; /* Aumentar el tamaño del texto */
+    padding: 15px; /* Agregar espacio interno */
+    border: 3px solid rgb(32, 232, 38); /* Agregar un borde blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #2ecc71; /* Fondo verde principal */
+    color: white; /* Color del texto */
+    display: inline-block; /* Ajustar el tamaño del cuadro al contenido */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    border-radius: 10px; /* Bordes redondeados iguales a Sukü */
+    border: 3px solid rgb(32, 232, 38); /* Borde verde igual a Sukü */
+    background-color: transparent; /* Fondo transparente por defecto */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+.sidebar ul li:hover {
+    background-color: #2ecc71; /* Verde principal */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(5px);
+}
+/* paar que se vea bien en pantallas deiferenta a computadora */
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        flex: 1 1 45%; /* Dos elementos por fila */
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .section button {
+        width: 100%; /* Botones ocupan todo el ancho */
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        margin: 5px 0;
+    }
+}
+/* Para pantallas medianas (tabletas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main {
+        margin-left: 200px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+}
+/* para la beinvenida la superadministrador */
+.bienvenida-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.bienvenida-section h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.bienvenida-section p {
+    font-size: 18px;
+    color: #34495e;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.bienvenida-section .section-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+    .bienvenida-section p {
+        font-size: 16px; /* Reducir el tamaño de la fuente */
+        text-align: center; /* Centrar el texto */
+        padding: 10px;
+    }
+
+    .bienvenida-section {
+        padding: 10px;
+    }
+}
+
+/* Elemento activo */
+.sidebar ul li.active {
+    background-color: #a3d9a5; /* Verde suave */
+    color: #2c3e50;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+/* Main content */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2ecc71; /* Verde principal */
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contenido */
+.content {
+    flex: 1;
+    padding: 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cada sección */
+.section {
+    background: #ffffff; /* Fondo blanco para tarjetas */
+    padding: 40px; /* Aumentar el espacio interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+    margin: 0; /* Espaciado entre secciones */
+    padding: 20px; /* Espaciado interno */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 3px solid #2ecc71; /* Borde verde */
+    width: 100%; /* Aumentar el ancho del cuadro */
+    margin: 20px auto; /* Centrar el cuadro horizontalmente */
+
+}
+
+/* Títulos */
+.section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Estilo para los párrafos dentro de las secciones */
+.section p {
+    font-size: 18px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    color: #2c3e50; /* Color oscuro elegante */
+    text-align: center; /* Centrar el texto */
+    margin-top: 10px; /* Espaciado superior */
+    margin-bottom: 20px; /* Espaciado inferior */
+    line-height: 1.6; /* Espaciado entre líneas */
+    font-style: italic; /* Texto en cursiva para un toque elegante */
+}
+/* Botones */
+.section button {
+    width: 220px;
+    margin: 10px 0;
+    padding: 12px;
+    background-color: #2ecc71; /* Verde principal */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.section button:hover {
+    background-color: #a3d9a5; /* Verde suave */
+    color: #2c3e50; /* Cambiar texto en hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(163, 217, 165, 0.4);
+}
+
+.icon-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icon-link {
+    font-size: 40px; /* Tamaño del ícono */
+    color: #1de771; /* Color verde */
+    text-decoration: none; /* Quitar subrayado */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #a3d9a5; /* Cambiar a verde suave al pasar el mouse */
+    transform: scale(1.2); /* Aumentar tamaño al pasar el mouse */
+}
+.user-info {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #2c3e50; /* Texto oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    font-size: 14px;
+    text-align: left;
+}
+.section-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+/* Reducir el margen superior del texto */
+.section p {
+    margin-top: 5px; /* Reducir el espacio encima del texto */
+    margin-bottom: 20px; /* Mantener algo de espacio debajo del texto */
+}
+
+
+/* estadisticas */
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat h3 {
+    font-size: 24px;
+    color: #27ae60;
+}
+
+.stat p {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+/* para eliminar una planta */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 300px;
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.modal-content button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:first-child {
+    background-color: #27ae60; /* Botón verde */
+    color: white;
+}
+
+.modal-content button:first-child:hover {
+    background-color: #219150; /* Verde más oscuro al pasar el mouse */
+}
+
+.modal-content button:last-child {
+    background-color: #e74c3c; /* Botón rojo */
+    color: white;
+}
+
+.modal-content button:last-child:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+}
+
+/* Contenedor de los botones */
+.button-container {
+    display: flex; /* Usar Flexbox para alinear los botones */
+    justify-content: center; /* Centrar los botones horizontalmente */
+    align-items: center; /* Centrar los botones verticalmente */
+    gap: 20px; /* Espaciado uniforme entre los botones */
+    margin-top: 20px; /* Separación del contenido superior */
+}
+
+#plantas {
+    min-height: 500px; /* Aumentar la altura mínima del cuadro */
+    padding: 20px; /* Ajustar el espaciado interno si es necesario */
+}
+#recetas {
+    min-height: 500px; /* Aumentar la altura mínima del cuadro */
+    padding: 20px; /* Ajustar el espaciado interno si es necesario */
+}
+#bienvenida {
+    min-height: 500px; /* Aumentar la altura mínima del cuadro */
+    padding: 20px; /* Ajustar el espaciado interno si es necesario */
+}
+/* ------------------------------------------------------------------------------------------- */
+/* para subir las plantas al sistema */
+
+.modal-subir-planta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-subir-planta .modal-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left; /* Alinear contenido a la izquierda */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 600px; /* Ancho mayor para el formulario */
+    max-height: 90vh; /* Limitar la altura máxima al 90% de la ventana */
+    overflow-y: auto; /* Habilitar scroll si el contenido excede la altura */
+}
+
+.modal-subir-planta .modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+.modal-subir-planta .modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.modal-subir-planta .modal-content input,
+.modal-subir-planta .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-subir-planta .modal-content .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-subir-planta .modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-subir-planta .modal-content button[type="submit"] {
+    background-color: #27ae60; /* Botón verde */
+    color: white;
+}
+
+.modal-subir-planta .modal-content button[type="submit"]:hover {
+    background-color: #219150; /* Verde más oscuro */
+}
+
+.modal-subir-planta .modal-content button[type="button"] {
+    background-color: #e74c3c; /* Botón rojo */
+    color: white;
+}
+
+.modal-subir-planta .modal-content button[type="button"]:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Para actualizar Plantas */
+/* Estilo para el modal de actualizar planta */
+.modal-actualizar-planta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-actualizar-planta .modal-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left; /* Alinear contenido a la izquierda */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 600px; /* Ancho mayor para el formulario */
+    max-height: 90vh; /* Limitar la altura máxima al 90% de la ventana */
+    overflow-y: auto; /* Habilitar scroll si el contenido excede la altura */
+}
+
+.modal-actualizar-planta .modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+.modal-actualizar-planta .modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.modal-actualizar-planta .modal-content input,
+.modal-actualizar-planta .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-actualizar-planta .modal-content .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-actualizar-planta .modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-actualizar-planta .modal-content button[type="submit"] {
+    background-color: #27ae60; /* Botón verde */
+    color: white;
+}
+
+.modal-actualizar-planta .modal-content button[type="submit"]:hover {
+    background-color: #219150; /* Verde más oscuro */
+}
+
+.modal-actualizar-planta .modal-content button[type="button"] {
+    background-color: #e74c3c; /* Botón rojo */
+    color: white;
+}
+
+.modal-actualizar-planta .modal-content button[type="button"]:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+/* -------------------------------------------------------------------------------------- */
+/* paareliminar plantas */
+/* Estilo específico para el modal de eliminar plantas */
+.modal-eliminar-planta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-eliminar-planta .modal-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 400px;
+}
+
+.modal-eliminar-planta .modal-content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+.modal-eliminar-planta .modal-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.modal-eliminar-planta .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-eliminar-planta .modal-content .button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-eliminar-planta .modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón de confirmar (rojo) */
+.modal-eliminar-planta .modal-content button[type="submit"] {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+}
+
+.modal-eliminar-planta .modal-content button[type="submit"]:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+
+/* Botón de cancelar (gris) */
+.modal-eliminar-planta .modal-content button[type="button"] {
+    background-color: #95a5a6; /* Gris */
+    color: white;
+}
+
+.modal-eliminar-planta .modal-content button[type="button"]:hover {
+    background-color: #7f8c8d; /* Gris más oscuro */
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* para subir recetas al sistema */
+
+.modal-subir-receta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-subir-receta .modal-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left; /* Alinear contenido a la izquierda */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 600px; /* Ancho mayor para el formulario */
+    max-height: 90vh; /* Limitar la altura máxima al 90% de la ventana */
+    overflow-y: auto; /* Habilitar scroll si el contenido excede la altura */
+}
+
+.modal-subir-receta .modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+.modal-subir-receta .modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.modal-subir-receta .modal-content input,
+.modal-subir-receta .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-subir-receta .modal-content .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-subir-receta .modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-subir-receta .modal-content button[type="submit"] {
+    background-color: #27ae60; /* Botón verde */
+    color: white;
+}
+
+.modal-subir-receta .modal-content button[type="submit"]:hover {
+    background-color: #219150; /* Verde más oscuro */
+}
+
+.modal-subir-receta .modal-content button[type="button"] {
+    background-color: #e74c3c; /* Botón rojo */
+    color: white;
+}
+
+.modal-subir-receta .modal-content button[type="button"]:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+/* ------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+/* para actualizar recetas al sistema */
+/* Estilo para el modal de actualizar receta */
+.modal-actualizar-receta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-actualizar-receta .modal-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left; /* Alinear contenido a la izquierda */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 600px; /* Ancho mayor para el formulario */
+    max-height: 90vh; /* Limitar la altura máxima al 90% de la ventana */
+    overflow-y: auto; /* Habilitar scroll si el contenido excede la altura */
+}
+
+.modal-actualizar-receta .modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+.modal-actualizar-receta .modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.modal-actualizar-receta .modal-content input,
+.modal-actualizar-receta .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-actualizar-receta .modal-content .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-actualizar-receta .modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-actualizar-receta .modal-content button[type="submit"] {
+    background-color: #27ae60; /* Botón verde */
+    color: white;
+}
+
+.modal-actualizar-receta .modal-content button[type="submit"]:hover {
+    background-color: #219150; /* Verde más oscuro */
+}
+
+.modal-actualizar-receta .modal-content button[type="button"] {
+    background-color: #e74c3c; /* Botón rojo */
+    color: white;
+}
+
+.modal-actualizar-receta .modal-content button[type="button"]:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+/* ---------------------------------------------------------------------------------------------------- */
+/* para eliminar una receta */
+/* Estilo específico para el modal de eliminar receta */
+.modal-eliminar-receta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-eliminar-receta .modal-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 400px;
+}
+
+.modal-eliminar-receta .modal-content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+.modal-eliminar-receta .modal-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.modal-eliminar-receta .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-eliminar-receta .modal-content .button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-eliminar-receta .modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón de confirmar (rojo) */
+.modal-eliminar-receta .modal-content button[type="submit"] {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+}
+
+.modal-eliminar-receta .modal-content button[type="submit"]:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+
+/* Botón de cancelar (gris) */
+.modal-eliminar-receta .modal-content button[type="button"] {
+    background-color: #95a5a6; /* Gris */
+    color: white;
+}
+
+.modal-eliminar-receta .modal-content button[type="button"]:hover {
+    background-color: #7f8c8d; /* Gris más oscuro */
+}
+/* ----------------------------------------------------------------------------------- */
+/* para gesitonar los permisos */
+/* Estilo específico para el modal de gestionar permisos */
+.modal-gestionar-permisos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-gestionar-permisos .modal-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 400px;
+}
+
+.modal-gestionar-permisos .modal-content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+.modal-gestionar-permisos .modal-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.modal-gestionar-permisos .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-gestionar-permisos .modal-content .button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-gestionar-permisos .modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón de guardar cambios (verde) */
+.modal-gestionar-permisos .modal-content button[type="submit"] {
+    background-color: #27ae60; /* Verde */
+    color: white;
+}
+
+.modal-gestionar-permisos .modal-content button[type="submit"]:hover {
+    background-color: #219150; /* Verde más oscuro */
+}
+
+/* Botón de cancelar (gris) */
+.modal-gestionar-permisos .modal-content button[type="button"] {
+    background-color: #95a5a6; /* Gris */
+    color: white;
+}
+
+.modal-gestionar-permisos .modal-content button[type="button"]:hover {
+    background-color: #7f8c8d; /* Gris más oscuro */
+}
+/* ----------------------------------------------------------------------------------- */
+/* Estilo específico para el modal de backup */
+#modal-backup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#modal-backup .modal-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 400px;
+}
+
+#modal-backup .modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50; /* Texto oscuro */
+}
+
+#modal-backup .modal-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #34495e;
+}
+
+#modal-backup .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#modal-backup .button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#modal-backup #backup-button {
+    background-color: #27ae60; /* Verde */
+    color: white;
+}
+
+#modal-backup #backup-button:hover {
+    background-color: #219150; /* Verde más oscuro */
+}
+
+#modal-backup #download-backup {
+    background-color: #3498db; /* Azul */
+    color: white;
+    display: none;
+}
+
+#modal-backup #download-backup:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+}
+
+#modal-backup .notification {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #a3d9a5; /* Verde suave */
+    color: #2c3e50; /* Texto oscuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    display: none;
+}
+
+#modal-backup .icon-container {
+    margin-top: 10px;
+}
+
+#modal-backup .icon-container i {
+    font-size: 40px;
+    color: #27ae60;
+}
+/* -------------------------------------------------------------------------------------- */
+/* Estilo base para las métricas */
+.stat {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Colores dinámicos según el estado */
+.stat[data-status="success"] {
+    border: 2px solid #27ae60; /* Verde */
+    background-color: #eafaf1;
+    color: #27ae60;
+}
+
+.stat[data-status="warning"] {
+    border: 2px solid #f1c40f; /* Amarillo */
+    background-color: #fef9e7;
+    color: #f1c40f;
+}
+
+.stat[data-status="error"] {
+    border: 2px solid #e74c3c; /* Rojo */
+    background-color: #fdecea;
+    color: #e74c3c;
+}
+
+/* Animación al pasar el mouse */
+.stat:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* para el modal de ver reportes */
+/* Estilo para el modal de reportes */
+#modal-reportes .modal-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#modal-reportes h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.report-section {
+    margin-bottom: 20px;
+}
+
+.report-section h4 {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.report-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.report-section ul li {
+    margin-bottom: 5px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.report-section p {
+    font-size: 16px;
+    color: #2c3e50;
+}
