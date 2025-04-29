@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sukü | Panel Superadministrador</title>
-    <link rel="stylesheet" href="{{ asset('css/SuperAdministrador.css') }}">
-    <script src="{{ asset('js/SuperAdministrador.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('SuperAdministrador/SuperAdministrador.css') }}">
+    <script src="{{ asset('SuperAdministrador/SuperAdministrador.js') }}"></script>
     <head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     </head>
@@ -44,7 +44,7 @@
         <div id="bienvenida" class="section bienvenida-section" style="display: none;">
             <h2>Bienvenido al área de gestión de Sukü</h2>
             <p>Administrando el presente, sembrando el futuro.</p>
-            <img src="PagianP.jpg" alt="Bienvenida" class="section-image">
+            <img src="{{ asset('image_Super/PaginaP.jpg') }}" alt="Bienvenida" class="section-image">
             <p>¡Hola, Superadministrador! Desde aquí puedes administrar plantas, recetas, usuarios y mantener el sistema Sukü siempre actualizado.</p>
         </div>
 
@@ -154,7 +154,7 @@
                             
             <div id="recetas" class="section" style="display: none;">
                 <h2><i class="fas fa-seedling"></i>  Gestión de Recetas</h2>
-                <img src="receta2.jpg" alt="Recetas" class="section-image">
+                <img src="{{ asset('image_Super/receta2.jpg') }}" alt="Recetas" class="section-image">
                 <p>Sube, actualiza o elimina recetas del sistema.</p>
                 <div class="button-container"> 
                 <button title="Sube una nueva receta al sistema" onclick="openModal('modal-subir-receta')"><i class="fas fa-upload"></i> Subir Receta</button>
@@ -259,7 +259,7 @@
            <!-- Botón para abrir el modal -->
            <div id="usuarios" class="section" style="display: none;">
             <h2><i class="fas fa-users-cog"></i>  Gestión de Usuarios y Permisos</h2>
-            <img src="manosindigenas.jpg" alt="Plantas" class="section-image">
+            <img src="{{ asset('image_Super/manosindigenas.jpg') }}" alt="Plantas" class="section-image">
             <p> Aquí puedes gestionar los permisos de los usuarios para garantizar un acceso adecuado al sistema.</p>
             <button class="centrar-boton" onclick="openGestionarPermisosModal()"><i class="fas fa-user-cog"></i>  Gestionar Permisos</button>
         </div>
@@ -298,7 +298,7 @@
 
             <div id="backup" class="section" style="display: none;">
                 <h2><i class="fas fa-hdd"></i>  Copias de Seguridad</h2>
-                <img src="indigenaTejiendo.jpg" alt="Plantas" class="section-image">
+                <img src="{{ asset('image_Super/indigenaTejiendo.jpg') }}" alt="Plantas" class="section-image">
                 <button onclick="openModal('modal-backup')">Realizar Backup</button>
             </div>
                 <!-- Modal para realizar backup -->

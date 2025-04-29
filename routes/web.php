@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 
 Route::get('/', function () {
-    return view('Home');
+    return view('SuperAdministrador');
 });
 
 Route::get('/home', [InicioController::class, 'create'])->name('home');
