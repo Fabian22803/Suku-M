@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -11,22 +12,21 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
-
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
      */
     protected $fillable = [
-        'name', // Nombre de usuario
-        'firstName', // Primer apellido
-        'lastName', // Segundo apellido
-        'email',     // Correo electrónico
-        'password',  // Contraseña
-        'phone',      // Teléfono
-        'address',    // Dirección
-        'role',       // Rol del usuario
-        
+        'name',
+        'lastName',
+        'email',
+        'password',
+        'phone',
+        'address',
+        'role',
+
     ];
 
     /**
@@ -49,38 +49,42 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'registration_date' => 'datetime', // Asegúrate de que este campo sea tratado como fecha
         ];
     }
-    public function comment()
+
+    // Removed duplicate $fillable declaration
+    
+  
+
+    public function comments()
     {
         return $this->hasMany('App\Models\comment');
     }
 
-    public function Notification()
+    public function Notifications()
     {
         return $this->hasMany('App\Models\Notification');
     }
 
-    public function Statistic()
+    public function Statistics()
     {
         return $this->hasMany('App\Models\Statistic');
     }
 
-    public function fourum_message()
+    public function fourum_messages()
     {
         return $this->hasMany('App\Models\fourum_message');
     }
 
-    public function Like()
+    public function likes()
     {
         return $this->hasMany('App\Models\Like');
     }
-    public function forum()
+    public function forums()
     {
         return $this->belongsToMany('App\Models\Forum');
     }
-    public function Role()
+    public function roles()
     {
         return $this->belongsToMany('App\Models\Role');
     }
@@ -88,4 +92,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Models\plant');
     }
+    public function hasRole($roleName)
+    {
+        return $this->roles()->where('name', $roleName)->exists();
+    }
+   
+ 
 }

@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('_role_user', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('roles_id')->unique();
+            $table->unsignedBigInteger('roles_id');
 
-            $table->unsignedBigInteger('user_id')->unique();
+            $table->unsignedBigInteger('user_id');
             //relacion uno a muchos con la tabla de roles
             $table->foreign('roles_id')
             ->references('id')

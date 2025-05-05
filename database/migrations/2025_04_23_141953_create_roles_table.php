@@ -18,6 +18,14 @@ return new class extends Migration
             $table->string('state'); //el estado del usuario si esta activo o inactivo
             $table->timestamps();
         });
+        // Crear la tabla pivote para la relación muchos a muchos
+        Schema::create('role_user', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('role_id')->constrained()->onDelete('cascade');
+            $table->timestamps();
+        });
+        
     }
 
     /**

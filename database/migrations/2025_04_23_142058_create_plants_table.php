@@ -29,6 +29,14 @@ return new class extends Migration
             ->onDelete('cascade')
             ->onUpdate('cascade'); //actualiza la planta si se actualiza el usuario
            
+            //relacion uno a muchos con la tabla usuarios
+            $table->unsignedBigInteger('users_id')->unique();
+            $table->foreign('users_id')
+            ->references('id')
+            ->on('users') // La tabla de usuarios
+            ->onDelete('cascade') //elimina la planta si se elimina el usuario
+            ->onUpdate('cascade'); //actualiza la planta si se actualiza el usuario
+
             $table->timestamps();
         });
     }

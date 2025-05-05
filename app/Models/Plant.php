@@ -6,6 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plant extends Model
 {
+    protected $table = 'plants';
+    protected $fillable = [
+        'name',
+        'scientific_name',
+        'description',
+        'benefits',
+        'image',
+        'category_plants_id',
+        'users_id'
+    ];
     //
     public function Plant_category()
     {

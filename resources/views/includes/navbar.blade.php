@@ -16,12 +16,28 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
 
-          <li class="nav-item"><a class="nav-link text-white" href="{{route('register.create')}}">Iniciar sesion</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="{{route('register.create')}}">Registrarte</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{route('login.form')}}">Iniciar sesion</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{route('register.form')}}">Registrarte</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#">Plantas</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{route('plants.create')}}">Plantas</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#">Recetas</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#"></a></li>
+          @if(Auth::check())
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-user-circle"></i> {{ Auth::user()->name }} {{-- Muestra el nombre del usuario --}}
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li>
+                      <form action="{{ route('logout') }}" method="POST">
+                          @csrf
+                          <button class="dropdown-item" type="submit">Cerrar sesión</button>
+                      </form>
+                  </li>
+              </ul>
+          </li>
+      @endif
+
         </ul>
       </div>
     </div>
