@@ -13,14 +13,10 @@ class Plant extends Model
         'description',
         'benefits',
         'image',
-        'category_plants_id',
         'users_id'
     ];
     //
-    public function Plant_category()
-    {
-        return $this->belongsTo('App\Models\Plant_category');
-    }
+  
     public function Comments()
     {
         return $this->hasMany('App\Models\Comment');

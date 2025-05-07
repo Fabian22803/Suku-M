@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/plants', [PlantController::class, 'index'])->name('plants.index');//mostrar todas las plantas
     Route::get('/plants/create', [PlantController::class, 'create'])->name('plants.create');//formulario para crear una planta
     Route::post('/plants', [PlantController::class, 'store'])->name('plants.store');//guardar la planta
-    Route::get('/plants/{plant}/edit', [PlantController::class, 'edit'])->name('plants.edit');//formulario para editar una planta
+    Route::get('/plants/{plant}/edit', [PlantController::class, 'edit'])->name('plant.edit');//formulario para editar una planta
     Route::put('/plants/{plant}', [PlantController::class, 'update'])->name('plants.update');//actualizar la planta
     Route::delete('/plants/{plant}', [PlantController::class, 'destroy'])->name('plants.destroy');// eliminar la planta
 });

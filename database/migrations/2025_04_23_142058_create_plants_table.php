@@ -18,19 +18,12 @@ return new class extends Migration
             $table->string('description'); //obligatorio
             $table->string('benefits');
             $table->string('image');
+            
 
 
-            $table->unsignedBigInteger('category_plants_id')->unique();
-
-            //relacion uno a muchos con la tabla categorias
-            $table->foreign('category_plants_id')
-            ->references('id')
-            ->on('plant_categories') // La tabla de categorias
-            ->onDelete('cascade')
-            ->onUpdate('cascade'); //actualiza la planta si se actualiza el usuario
-           
+        
             //relacion uno a muchos con la tabla usuarios
-            $table->unsignedBigInteger('users_id')->unique();
+            $table->unsignedBigInteger('users_id');
             $table->foreign('users_id')
             ->references('id')
             ->on('users') // La tabla de usuarios
