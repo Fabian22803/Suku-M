@@ -22,7 +22,7 @@ class PlantController extends Controller
     }
     public function create()
     {
-        // Aquí puedes mostrar el formulario para crear una nueva planta
+        // devuelve la vista con las plantas
         return view('plant.create');
     }
     public function store(Request $request)

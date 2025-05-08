@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');//obligatorio
             $table->string('scientific_name')->nullable(); //opcional
-            $table->string('description'); //obligatorio
-            $table->string('benefits');
+            $table->text('description'); //obligatorio
+            $table->text('benefits');
             $table->string('image');
             
 
