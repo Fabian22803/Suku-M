@@ -20,7 +20,7 @@
           <li class="nav-item"><a class="nav-link text-white" href="{{route('register.form')}}">Registrarte</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="{{route('home')}}">Inicio</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="{{route('plants.index')}}">Plantas</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#">Recetas</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{route('recipes.index')}}">Recetas</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#"></a></li>
           @if(Auth::check())
           <li class="nav-item dropdown">

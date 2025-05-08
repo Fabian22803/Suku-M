@@ -96,6 +96,10 @@ class User extends Authenticatable
     {
         return $this->roles()->where('name', $roleName)->exists();
     }
+    public function recipes()
+    {
+        return $this->hasMany('App\Models\Recipe');
+    }
    
  
 }

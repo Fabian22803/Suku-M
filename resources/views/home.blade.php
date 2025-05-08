@@ -25,7 +25,7 @@
     <h1 class="fw-bold">Plantas medicinales de Caldono Cauca</h1>
 
     <!-- Descripción -->
-    <p class="lead">
+    <p class="lead"><strong>Las plantas medicinales son parte fundamental de la cultura y la medicina tradicional de Caldono, Cauca.</strong></p>
         Caldono, un municipio ubicado en el norte del departamento del Cauca, Colombia, es una región rica en biodiversidad y saberes ancestrales. En este territorio, las plantas medicinales juegan un papel fundamental dentro de la cultura de las comunidades indígenas, campesinas y afrodescendientes.
 
         Gracias a su ubicación geográfica, Caldono cuenta con una gran variedad de especies nativas utilizadas tradicionalmente para tratar dolencias comunes como gripes, dolores musculares, problemas digestivos y enfermedades de la piel. Plantas como el matico, la ruda, el sauco, la altamisa y el boldo son solo algunas de las más empleadas.
@@ -37,13 +37,7 @@
 
 
   
-<div class="card mt-4">
-    <div class="card-body">
-        <h5 class="card-title">Plantas</h5>
-        <p class="card-text">Explora más sobre las plantas medicinales de Caldono Cauca.</p>
-        {{-- <a href="{{ route('plantas.index') }}" class="btn btn-primary">Ver más</a> --}}
-    </div>
-</div>
+
 
 </div>
 

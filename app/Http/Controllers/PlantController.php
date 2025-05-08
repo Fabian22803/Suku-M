@@ -12,11 +12,12 @@ class PlantController extends Controller
     {
       $query = Plant::query();
         // Filtrar por nombre
-        if ($request->has('name')) {
-            $query->where('name', 'like', '%' . $request->input('name') . '%');
+        if ($request->has('search')&& $request->search) {
+            $query->where('name', 'like', '%' . $request->search . '%');
         }
-        // Aquí puedes obtener las plantas de la base de datos y pasarlas a la vista
-        $plants = Plant::all();
+        $plants = $query->get();
+        // obtener las plantas de la base de datos y pasarlas a la vista
+        
         return view('plant.index', compact('plants'));
     }
     public function create()

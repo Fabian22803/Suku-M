@@ -29,4 +29,8 @@ class Plant extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+    public function recipes()
+    {
+        return $this->hasMany('App\Models\Recipe');
+    }
 }

@@ -17,7 +17,7 @@
     </form> 
 
     <div class="row">
-        @foreach ($plants as $plant)
+        @forelse ($plants as $plant)
             <div class="col-md-4">
                 <div class="card mb-3 shadow">
                     @if ($plant->image)
@@ -26,8 +26,9 @@
                     <div class="card-body">
                         <h5 class="card-title text-success">{{ $plant->name }}</h5>
                         <p class="card-text"><strong>Nombre científico:</strong> {{ $plant->scientific_name }}</p>
-                        <p class="card-text"><strong>Descripción:</strong> {{ Str::limit($plant->description, 100) }}</p>
-                        <p class="card-text"><strong>Beneficios:</strong> {{ Str::limit($plant->benefits, 100) }}</p>
+                        
+                        <p class="card-text"><strong>Descripción:</strong> {{ $plant->description}}</p>
+                        <p class="card-text"><strong>Beneficios:</strong> {{ $plant->benefits }}</p>
                         @if ($plant->users_id === Auth::id())
                             <div class="d-flex justify-content-between">
                                 <a href="{{ route('plant.edit', $plant) }}" class="btn btn-primary btn-sm">Editar</a>
@@ -41,10 +42,10 @@
                     </div>
                 </div>
             </div>
-            {{-- @empty
+             @empty
             <p class="text-center">No se encontraron plantas.</p>
-        @endforelse --}}
-        @endforeach
+        @endforelse 
+        
     </div>
 </div>
 @endsection
