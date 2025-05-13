@@ -2,9 +2,12 @@
 
 @section('content')
 <div class="container mt-5">
+    <a href="{{url()->previous()}}" class="btn btn-secondary mb-3" style="background-color: #0b9440; color: white;">Volver</a>
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="text-success">Lista de Plantas</h1>
+        @if (Auth::check())
         <a href="{{ route('plants.create') }}" class="btn btn-success">Agregar Planta</a>
+        @endif
     </div>
 
     
@@ -44,8 +47,7 @@
             </div>
              @empty
             <p class="text-center">No se encontraron plantas.</p>
-        @endforelse 
-        
+        @endforelse  
     </div>
 </div>
 @endsection

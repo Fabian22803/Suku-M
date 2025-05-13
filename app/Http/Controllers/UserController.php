@@ -27,20 +27,20 @@ public function create()
          'password' => 'required|string|min:8|confirmed',
          'phone' => 'required|string|max:15',
          'address' => 'required|string|max:255',
-         'role' => 'required|string|max:50',
+         
      ]);
 
-     // Create a new user and save to the database
+     // se cre una tabla 
      $user = new User();
      $user->name = $request->name;
      $user->lastName = $request->lastName;
      $user->email = $request->email;
-     $user->password = bcrypt($request->password); // Encrypt the password
+     $user->password = bcrypt($request->password); // clave encriptada
      $user->phone = $request->phone;
      $user->address = $request->address;
-     $user->role = $request->role;
+        $user->role = 'user'; // rol por defecto
 
-     $user->save(); // Save to the database
+     $user->save(); // se guarda en la  database
 
      return redirect()->route('inicio')->with('success', '¡Registro exitoso! Por favor, inicia sesión.');
  }
@@ -68,5 +68,5 @@ public function create()
     
         return redirect ()->route('login.form')->with('success', 'Logout successful');
     }
-  
+ 
 }

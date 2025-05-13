@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container mt-5">
+   
     <div class="card shadow">
         <div class="card-header bg-success text-white">
             <h3 class="mb-0">Agregar Nueva Receta</h3>
@@ -39,7 +40,7 @@
                     </select>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <a href="{{ route('recipes.index') }}" class="btn btn-secondary">Cancelar</a>
+                    <a href="{{ route('recipes.index') }}" class="btn btn-secondary" style="background-color: #0b9440; color: white;">Cancelar</a>
                     <button type="submit" class="btn btn-success">Guardar Receta</button>
                 </div>
             </form>

@@ -48,16 +48,12 @@
                             <label for="address" class="form-label">Dirección:</label>
                             <input type="text" name="address" id="address" class="form-control" placeholder="Ingresa tu dirección" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="role" class="form-label">Rol:</label>
-                            <select name="role" id="role" class="form-select" required>
-                                <option value="" disabled selected>Seleccione un rol</option>
-                                <option value="admin">Administrador</option>
-                                <option value="user">Usuario</option>
-                            </select>
-                        </div>
+                       
                         <div class="d-grid">
                             <button type="submit" class="btn btn-success">Registrarte</button>
+                        </div>
+                        <div class="d-grid mt-3">
+                            <a href="{{ url()->previous() }}" class="btn btn-secondary" style="background-color: #0b9440; color: white;">Volver</a>
                         </div>
                     </form>
                 </div>

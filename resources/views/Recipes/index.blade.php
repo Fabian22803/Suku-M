@@ -1,10 +1,13 @@
 @extends('layout.app')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-5 ">
+    <a href="{{url()->previous()}}" class="btn btn-secondary mb-3" style="background-color: #0b9440; color: white;">Volver</a>
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="text-success">Lista de Recetas</h1>
+        @if (Auth::check())
         <a href="{{ route('recipes.create') }}" class="btn btn-success">Agregar Receta</a>
+        @endif
     </div>
     {{-- formulario de busqueda --}}
     <form action="{{ route('recipes.index') }}" method="GET" class="mb-4">
@@ -23,7 +26,9 @@
                         <div class="card-body">
                             <h5 class="card-title text-success">{{ $recipe->name_recipe }}</h5>
                             <p class="card-text"><strong>Planta relacionada:</strong> {{ $recipe->plant->name }}</p>
-                            <p class="card-text"><strong>Descripción:</strong> {{ Str::limit($recipe->description, 100) }}</p>
+                            <p class="card-text"><strong>Descripción:</strong> {{ $recipe->description}}</p>
+                            <p class="card-text"><strong>Ingredientes:</strong> {{ $recipe->ingredients}}</p>
+                            <p class="card-text"><strong>Instrucciones:</strong> {{ $recipe->instructions }}</p>
                             <p class="card-text"><strong>Tiempo de preparación:</strong> {{ $recipe->preparation_time }}</p>
                             @if ($recipe->user_id === Auth::id())
                                 <div class="d-flex justify-content-between">

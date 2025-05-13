@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container mt-5">
+    <a href="{{url()->previous()}}" class="btn btn-secondary mb-3" style="background-color: #0b9440; color: white;">Volver</a>
     <div class="card shadow">
         <div class="card-header bg-success text-white">
             <h3 class="mb-0">Editar Planta</h3>

@@ -30,7 +30,7 @@
                     <input type="file" name="image" id="image" class="form-control" accept="image/*">
                 </div>
                 <div class="d-flex justify-content-between">
-                    <a href="{{ route('plants.index') }}" class="btn btn-secondary">Cancelar</a>
+                    <a href="{{ route('plants.index') }}" class="btn btn-success">Cancelar</a>
                     <button type="submit" class="btn btn-success">Guardar Planta</button>
                 </div>
             </form>
